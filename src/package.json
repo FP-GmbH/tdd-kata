@@ -4,7 +4,8 @@
   "description": "just our kata project to practice test driven development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,21 @@
   ],
   "author": "bastian_charlet <bc@fp.de>",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
   "bugs": {
     "url": "https://github.com/FP-GmbH/tdd-kata/issues"
   },
   "homepage": "https://github.com/FP-GmbH/tdd-kata#readme",
   "dependencies": {
-    "jest": "^29.7.0"
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2"
   }
 }
