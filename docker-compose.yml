@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    image: tdd-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - GIT_USER_NAME=${GIT_USER_NAME}
+      - GIT_USER_EMAIL=${GIT_USER_EMAIL}
+    volumes:
+      - $HOME/.ssh:/root/.ssh
+      - .:/app
+    working_dir: /app
+    entrypoint: ["bash", "-c", "git config --global user.name \"$GIT_USER_NAME\" && git config --global user.email \"$GIT_USER_EMAIL\" && exec bash"]
+    command: ["node"]
