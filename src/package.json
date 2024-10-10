@@ -1,0 +1,28 @@
+{
+  "name": "tdd-kata",
+  "version": "0.0.1",
+  "description": "just our kata project to practice test driven development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FP-GmbH/tdd-kata.git"
+  },
+  "keywords": [
+    "tdd",
+    "f&p",
+    "kata",
+    "js"
+  ],
+  "author": "bastian_charlet <bc@fp.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FP-GmbH/tdd-kata/issues"
+  },
+  "homepage": "https://github.com/FP-GmbH/tdd-kata#readme",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
