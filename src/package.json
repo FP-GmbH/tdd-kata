@@ -4,7 +4,7 @@
   "description": "just our kata project to practice test driven development",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node --loader ts-node/esm index.ts",
     "test": "jest"
   },
   "repository": {

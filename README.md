@@ -12,3 +12,4 @@ regular kata to learn and improve test driven development skills
 1. Run the project
    * either `make run`
    * or `docker-compose up`
+2. 
