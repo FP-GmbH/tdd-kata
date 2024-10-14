@@ -1,16 +1,19 @@
 # tdd-kata
 regular kata to learn and improve test driven development skills
 
+## Requirements
+- make (<- recommended)
+- docker
+
 ## Installation
 1. Clone the repository
 2. Build the project
    * either `make build` (<- recommended)
    * or `docker-compose build`
-3. configure .env
+3. (optional) configure .env
 
 ## Usage
-1. Create a branch for your kata `git checkout -b kata/your-kata-name`
-2. Run the project `docker compose run app bash`
+- Run the project `docker compose run --rm app bash`
 
 ### Start Mob Session
 1. Start the mob session `mob start --create`
