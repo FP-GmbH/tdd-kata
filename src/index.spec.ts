@@ -11,4 +11,10 @@ describe("when I give a string as an input", () => {
             expect(summary).toBe(0);
         });
     });
+    describe("when string is number '1'", ()=>{
+        it("should return 1", ()=>{
+            const summary = add('1')
+            expect(summary).toBe(1);
+        });
+    })
 });
