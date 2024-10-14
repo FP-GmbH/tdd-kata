@@ -1,7 +1,7 @@
 say_hello:
 	echo "Hello World"
 build_docker_image:
-	docker build -t tdd-container .
+	docker build -t tdd-kata/node-jest-ts:0.1.0 .
 create_env_file:
 	echo "GIT_USER_NAME=$(shell git config --global user.name)" > .env
 	echo "GIT_USER_EMAIL=$(shell git config --global user.email)" >> .env
