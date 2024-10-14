@@ -13,7 +13,7 @@ regular kata to learn and improve test driven development skills
 2. Run the project `docker compose run app bash`
 
 ### Start Mob Session
-1. Start the mob session `mob start --create`
+1. Start the mob session `mob start --create --include-uncommitted-changes`
 2. Write a failing test
 3. Run the test `npm test`
 4. Pass to the next person by running `mob next`

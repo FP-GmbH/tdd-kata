@@ -1,9 +1,14 @@
-import {main} from "./index";
+import { main } from "./index";
+import { add } from "./index";
 
-describe("when running the app", () => {
-    it("should output 'Hello, World!'", () => {
-        const consoleSpy = jest.spyOn(console, "log");
-        main();
-        expect(consoleSpy).toHaveBeenCalledWith("Hello, World!");
+describe("when I give a string as an input", () => {
+
+    describe("and it's an empty string", () => {
+
+        it("should return zero", () => {
+
+            const summary = add('')
+            expect(summary).toBe(0);
+        });
     });
 });
