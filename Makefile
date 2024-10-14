@@ -1,5 +1,3 @@
-say_hello:
-	echo "Hello World"
 build_docker_image:
 	docker build -t tdd-kata/node-jest-ts:0.1.0 .
 create_env_file:
@@ -8,11 +6,19 @@ create_env_file:
 build:
 	make create_env_file
 	make build_docker_image
-run:
-	docker compose up -d
+	docker compose run --rm app "npm install"
+git_branch:
+	git checkout -b $(shell date +%Y%m%d) || git checkout $(shell date +%Y%m%d)
 
+
+mob_new:
+	make git_branch
+	make mob_start
 mob_start:
-	docker compose exec app "mob start"
+	docker compose run --rm app "mob start && exit"
+mob_join:
+	make git_branch
+	docker compose run --rm app "mob join"
 mob_next:
 	docker compose exec app "mob next"
 mob_done:
