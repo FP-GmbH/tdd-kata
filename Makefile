@@ -18,8 +18,8 @@ mob_start:
 	docker compose run --rm app "mob start && exit"
 mob_join:
 	make git_branch
-	docker compose run --rm app "mob join"
+	docker compose run --rm app "mob start"
 mob_next:
-	docker compose exec app "mob next"
+	docker compose run --rm app "mob next"
 mob_done:
-	docker compose exec app "mob done"
+	docker compose run --rm app "mob done"
