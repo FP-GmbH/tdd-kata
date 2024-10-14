@@ -13,5 +13,11 @@ services:
       - $HOME/.ssh/id_rsa:/root/.ssh/id_rsa
       - .:/app
     working_dir: /app/src
-    entrypoint: ["bash", "-c", "git config --global user.name \"$GIT_USER_NAME\" && git config --global user.email \"$GIT_USER_EMAIL\" && npm i && exec bash"]
-    command: ["node"]
+    entrypoint: >
+      bash -c "
+        git config --global user.name \"$GIT_USER_NAME\" &&
+        git config --global user.email \"$GIT_USER_EMAIL\" &&
+        npm install &&
+        exec "$0" "$@"
+      "
+    command: [ "/bin/bash", "-c" ]
